@@ -7,16 +7,20 @@ public class Workshop {
 
     // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
-        // TODO: Implementar el método para retornar la suma de dos números enteros.
-        // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
+        
         return a+b;
     }
 
     // Método que encuentra el mayor de tres números enteros
     public int mayorDeTresNumeros(int a, int b, int c) {
-        // TODO: Implementar el método para retornar el mayor de los tres números enteros.
-        // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
-        return 0;
+        if ( a>b && a>c){
+        	int mayor = a;
+        } else if (b>c){
+        	int mayor = b;
+        } else {
+        	int mayor = c;
+        }  
+        return mayor;
     }
 
     // Método que retorna la tabla de multiplicar de un número
