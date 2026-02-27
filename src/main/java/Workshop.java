@@ -62,10 +62,24 @@ public class Workshop {
 
     // Método que genera una serie de Fibonacci
     public int[] serieFibonacci(int n) {
-        // TODO: Implementar el método para generar la serie de Fibonacci hasta el número n.
-        // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
-        // Lanzar IllegalArgumentException si n es negativo.
-        return new int[0];
+
+	int[] fibo = new int[n];
+	
+
+        if (n<=0){
+          return fibo;
+	}
+
+        for (int i=0; i<n; i++){
+	 if ( i == 0 ){
+	  fibo[i] = 0;
+	 } else if ( i == 1 ){
+	  fibo[i] = 1;
+	 } else {
+	  fibo[i] = fibo[i-1] + fibo[i-2];
+	 }
+        }
+        return fibo;
     }
 
     // Método que suma todos los elementos de un arreglo
