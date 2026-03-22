@@ -314,18 +314,17 @@ public class Workshop {
 
     // Método para el juego de piedra, papel, tijera, lagarto, Spock
     public String jugarPiedraPapelTijeraLagartoSpock(String eleccionUsuario) {
-        // TODO: Implementar el método para el juego de Piedra, Papel, Tijera, Lagarto, Spock.
-        // Las reglas del juego son:
-        // - Piedra vence a Tijera y Lagarto
-        // - Papel vence a Piedra y Spock
-        // - Tijera vence a Papel y Lagarto
-        // - Lagarto vence a Spock y Papel
-        // - Spock vence a Tijera y Piedra
+        String[] op = {"Piedra", "Papel", "Tijera", "Lagarto", "Spock"};
+    	int rng = (int)(Math.random() * 5);
+    	String pc = op[rng];
 
-
-        // El método debe retornar un mensaje indicando el resultado del juego.
-        // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
-        return "";
+    	if (eleccionUsuario.equals(pc)) {
+         return "Empate";
+    	} else if ((eleccionUsuario.equals("Piedra") && (pc.equals("Tijera") 	|| pc.equals("Lagarto"))) || (eleccionUsuario.equals("Papel") && (pc.equals("Piedra") || 	pc.equals("Spock"))) || (eleccionUsuario.equals("Tijera") && (pc.equals("Papel") || pc.equals("Lagarto"))) || (eleccionUsuario.equals("Lagarto") && 	(pc.equals("Spock") || pc.equals("Papel"))) || (eleccionUsuario.equals("Spock") && (pc.equals("Tijera") || pc.equals("Piedra")))) {
+         return "Ganaste";
+    	} else {
+         return "Perdiste";
+    	}
     }
 
     public String pptls2(String game[]) {
