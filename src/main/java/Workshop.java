@@ -256,8 +256,8 @@ public class Workshop {
 
     // Método que convierte una cadena a minúsculas
     public String convertirAMinusculas(String cadena) {
-   
-        return "";
+   	cadena = cadena.toLowerCase();
+        return cadena;
     }
 
     // Método que reemplaza una subcadena en una cadena por otra subcadena
